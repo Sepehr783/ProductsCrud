@@ -1,0 +1,56 @@
+﻿@model IEnumerable<Mobile>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="mt-5">
+    <div class="row">
+        <img src="~/images/NoPhoto/mobiles.png" width="200" />
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <h2 class="text-primary">Mobile List</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a asp-controller="Mobile" asp-action="Create" class="btn btn-outline-primary px-5">Add New Mobile</a>
+        </div>
+    </div>
+    <table class="table table-bordered table-striped">
+        <thead>
+        <tr>
+            <th></th>
+            <th>
+                <a asp-controller="Home" asp-action="SortBy" style="text-decoration: none">Name</a>
+            </th>
+            <th>
+                <a asp-controller="Home" asp-action="SortByDesc" style="text-decoration: none">Price</a>
+            </th>
+            <th>Action</th>
+        </tr>
+        </thead>
+
+        <tbody>
+        @foreach (var mobile in Model)
+        {
+            <tr>
+                <td style="width: 10%" class="text-center">
+                    @if (mobile.MobilePhotoImage != null)
+                    {
+                        <img src="~/images/@mobile.MobilePhotoImage" alt="@mobile.MobileName" width="70" height="70" class="img-thumbnail">
+                    }
+                    else
+                    {
+                        <img src="~/images/NoPhoto/NoPhoto.jpeg" alt="@mobile.MobileName" width="70" height="70" class="img-thumbnail">
+                    }
+                </td>
+                <td class="align-middle">@mobile.MobileName</td>
+                <td class="align-middle">@mobile.Price.ToString("C0")</td>
+                <td class="align-middle" style="width: 30%">
+                    <a asp-controller="Mobile" asp-action="Edit" asp-route-id="@mobile.Id" class="btn btn-outline-secondary px-3">Edit</a>
+                    <a asp-controller="Mobile" asp-action="Delete" asp-route-id="@mobile.Id" class="btn btn-outline-danger px-3">Remove</a>
+                </td>
+            </tr>
+        }
+        </tbody>
+    </table>
+</div>

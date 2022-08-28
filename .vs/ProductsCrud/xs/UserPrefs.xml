@@ -1,0 +1,47 @@
+﻿<Properties StartupConfiguration="{0CE1FBB7-0942-4C2F-A3D2-A96FA79EDC2D}|Default">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.ProductCrud PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.Workbench ActiveDocument="ProductCrud/Views/Mobile/Edit.cshtml">
+    <Files>
+      <File FileName="ProductCrud/Program.cs" Line="17" Column="17" />
+      <File FileName="ProductCrud/Controllers/HomeController.cs" Line="21" Column="1" />
+      <File FileName="ProductCrud/Views/Home/Index.cshtml" Line="33" Column="57" />
+      <File FileName="ProductCrud/Views/Mobile/Create.cshtml" Line="7" Column="34" />
+      <File FileName="ProductCrud/Views/Mobile/Edit.cshtml" Line="12" Column="37" />
+      <File FileName="ProductCrud/Models/Mobile.cs" Line="17" Column="5" />
+      <File FileName="ProductCrud/Controllers/MobileController.cs" Line="27" Column="27" />
+      <File FileName="ProductCrud/Models/MobileViewModel.cs" Line="12" Column="24" />
+      <File FileName="ProductCrud/Views/Mobile/Delete.cshtml" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ProductsCrud" expanded="True">
+            <Node name="ProductCrud" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="Mobile" expanded="True">
+                  <Node name="Edit.cshtml" selected="True" />
+                </Node>
+                <Node name="Shared" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="images" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.Debugger.WatchPad">
+        <State />
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+</Properties>

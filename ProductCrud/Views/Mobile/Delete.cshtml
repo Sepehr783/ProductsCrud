@@ -1,0 +1,42 @@
+@model Mobile
+@{
+    ViewData["Title"] = "Edit Mobile Information";
+}
+
+
+<div class="mt-2 text-center">
+    @if (Model.MobilePhotoImage == null)
+    {
+        <img src="~/images/NoPhoto/mobile.png" width="300" height="300" alt="Mobile" class=" img-thumbnail">
+    }
+    else
+    {
+        <img src="~/images/@Model.MobilePhotoImage" width="300" height="300" alt="Mobile" class=" img-thumbnail">
+    }
+</div>
+
+<div class="mt-2">
+    <div class="row">
+        <h2 class="text-danger fst-italic">Are you sure to drop this Mobile from Market ?</h2>
+    </div>
+</div>
+
+<div class="mt-2">
+    <form method="post" asp-controller="Mobile" asp-action="Delete">
+        
+        <input type="hidden" asp-for="Id"/>
+        <input type="hidden" asp-for="MobilePhotoImage"/>
+        
+        <div class="mb-3">
+            <label asp-for="MobileName"></label>
+            <input asp-for="MobileName" class="form-control" disabled="disabled"/>
+        </div>
+
+        <div class="mb-3">
+            <label asp-for="Price">Price</label>
+            <input asp-for="Price" class="form-control" disabled="disabled"/>
+        </div>
+
+        <button type="submit" class="btn btn-outline-danger px-5">Remove</button>
+    </form>
+</div>
